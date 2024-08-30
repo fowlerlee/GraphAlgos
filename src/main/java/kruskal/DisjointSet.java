@@ -1,11 +1,8 @@
 package kruskal;
 
-
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class DisjointSet {
-    AtomicBoolean b = new AtomicBoolean();
     public DisjointSet(List<Vertex> rootNodes) {
         makeSets(rootNodes);
     }
@@ -32,6 +29,7 @@ public class DisjointSet {
 
         return root;
     }
+
 
 
     public void union(Node node1, Node node2){
