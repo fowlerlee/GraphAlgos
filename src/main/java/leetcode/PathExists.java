@@ -2,15 +2,15 @@ package leetcode;
 
 public class PathExists {
     class Solution {
-        int par[];
+        int path[];
         int size[];
         int rank[];
 
         public boolean validPath(int n, int[][] edges, int source, int destination) {
-            par = new int[n];
+            path = new int[n];
             rank = new int[n];
             for (int i = 0; i < n; i++) {
-                par[i] = i;
+                path[i] = i;
             }
             for (int[] a : edges) {
                 int x = find(a[0]);
@@ -26,10 +26,10 @@ public class PathExists {
         }
 
         int find(int a) {
-            if (par[a] == a)
+            if (path[a] == a)
                 return a;
             else
-                return par[a] = find(par[a]);
+                return path[a] = find(path[a]);
         }
 
         void union(int a, int b) {
@@ -38,12 +38,12 @@ public class PathExists {
             if (a == b)
                 return;
             if (rank[a] >= rank[b]) {
-                par[b] = a;
+                path[b] = a;
                 rank[a]++;
             } else {
-                par[a] = b;
+                path[a] = b;
                 rank[b]++;
             }
         }
-    }
+    } 
 }
