@@ -1,5 +1,7 @@
-# Graph Algorithms course with Holzcer B.
+# Welcome to the repo for Graph Algorithms (course with Holzcer B) and Leetcode examples.
 
-## This course is a deep dive into all the algos in Graphs such as BFS, DFS, etc.
+## The repo contains mostly java code but some Leetcode or other challenges could contain Go, Rust or Python.
 
-Certainly the best course on the web for algos and hosted on Udemy.
+You will therefore require the Rust compiler, Go compiler or Pyton interpreter installed to run the examples or just use a playground.
+
+## I recommend Holzers courses on algos Udemy, He is a great instuctor and you will have lots of fun.
