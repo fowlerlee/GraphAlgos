@@ -43,6 +43,6 @@ public class SurroundedRegions {
                 { 'X', 'X', 'O', 'X' },
                 { 'X', 'O', 'X', 'X' } };
         SurroundedRegions.solve(board);
-
+        System.out.println("done");
     }
 }
