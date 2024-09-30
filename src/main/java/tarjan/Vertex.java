@@ -75,7 +75,7 @@ public class Vertex {
 
     @Override
     public String toString() {
-        return "Vertex " + name + "is in SCC " + sccComponentId;
+        return "Vertex " + name + " is in SCC " + sccComponentId;
     }
 
 }
