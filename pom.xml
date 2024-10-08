@@ -32,7 +32,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>zookool.LeaderElection</mainClass>
+                            <mainClass>zookool.Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
