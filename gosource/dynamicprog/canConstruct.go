@@ -9,11 +9,15 @@ func canConstruct(target string, wordBank []string) bool {
 		if table[i] {
 			for _, v := range wordBank {
 				// fmt.Println(target[i : i+len(v)])
-				if len(target) >= (i + len(v)) && target[i:(i+len(v))] == v {
+				if len(target) >= (i+len(v)) && target[i:(i+len(v))] == v {
 					table[i+len(v)] = true
 				}
 			}
 		}
 	}
 	return table[len(target)]
+}
+
+func bestSum(targetSum int, numbers []int) bool {
+	return true
 }
