@@ -23,10 +23,10 @@ func TestCanConstruct(t *testing.T) {
 	}
 }
 
-func TestBestSum(t *testing.T) {
+func TestHowSum(t *testing.T) {
 	target := 7
 	numbers := []int{5, 3, 4}
-	result := bestSum(target, numbers)
+	result := howSum(target, numbers)
 	expected := []int{4, 3}
 	if !reflect.DeepEqual(result, expected) {
 		t.Fatalf("failed 1st test")

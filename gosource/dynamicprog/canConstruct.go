@@ -15,10 +15,10 @@ func canConstruct(target string, wordBank []string) bool {
 			}
 		}
 	}
-	return table[len(target)]
+	return table[len(target)] 
 }
 
-func bestSum(targetSum int, numbers []int) []int {
+func howSum(targetSum int, numbers []int) []int {
 	table := make([][]int, targetSum+1)
 	table[0] = make([]int, 0)
 	for i := 0; i <= targetSum; i++ {
