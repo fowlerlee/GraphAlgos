@@ -1,6 +1,7 @@
 package dynamicprog
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -19,5 +20,15 @@ func TestCanConstruct(t *testing.T) {
 	expected = false
 	if result != expected {
 		t.Fatalf("failed 2nd the test!")
+	}
+}
+
+func TestBestSum(t *testing.T) {
+	target := 7
+	numbers := []int{5, 3, 4}
+	result := bestSum(target, numbers)
+	expected := []int{4, 3}
+	if !reflect.DeepEqual(result, expected) {
+		t.Fatalf("failed 1st test")
 	}
 }
