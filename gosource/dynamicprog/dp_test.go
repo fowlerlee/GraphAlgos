@@ -29,6 +29,32 @@ func TestHowSum(t *testing.T) {
 	result := howSum(target, numbers)
 	expected := []int{4, 3}
 	if !reflect.DeepEqual(result, expected) {
-		t.Fatalf("failed 1st test")
+		t.Fatalf("failed, expected: %v, result: %v", expected, result)
+	}
+}
+
+func TestRecurseConstruct(t *testing.T) {
+	target := "abcdef"
+	wordBank := []string{"ab", "abc", "cd", "def", "abcd"}
+	result := recurseConstruct(target, wordBank, nil)
+	expect := true
+	if !reflect.DeepEqual(result, expect) {
+		t.Fatalf("failed, expected: %v, result: %v", expect, result)
+	}
+
+	target = "sledgehammer"
+	wordBank = []string{"sledge", "sl", "geh", "hammer", "mer"}
+	result = recurseConstruct(target, wordBank, nil)
+	expect = true
+	if !reflect.DeepEqual(result, expect) {
+		t.Fatalf("failed, expected: %v, result: %v", expect, result)
+	}
+
+	target = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeX"
+	wordBank = []string{"eee", "eeeeeee", "eeeeeeeeee", "eeeeeeeeeee", "eeeeeeeeeeeeeee"}
+	result = recurseConstruct(target, wordBank, nil)
+	expect = false
+	if !reflect.DeepEqual(result, expect) {
+		t.Fatalf("failed, expected: %v, result: %v", expect, result)
 	}
 }
