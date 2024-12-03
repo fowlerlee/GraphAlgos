@@ -33,6 +33,16 @@ func TestHowSum(t *testing.T) {
 	}
 }
 
+func TestBestSum(t *testing.T) {
+	target := 7
+	numbers := []int{5, 4, 3, 1}
+	result := bestSum(target, numbers)
+	expected := []int{3, 4}
+	if !reflect.DeepEqual(result, expected) {
+		t.Fatalf("failed, expected: %v, result: %v", expected, result)
+	}
+}
+
 func TestRecurseConstruct(t *testing.T) {
 	target := "abcdef"
 	wordBank := []string{"ab", "abc", "cd", "def", "abcd"}
