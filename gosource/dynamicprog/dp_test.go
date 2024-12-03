@@ -34,10 +34,10 @@ func TestHowSum(t *testing.T) {
 }
 
 func TestBestSum(t *testing.T) {
-	target := 7
-	numbers := []int{5, 4, 3, 1}
-	result := bestSum(target, numbers)
-	expected := []int{3, 4}
+	target := 17
+	numbers := []int{5, 6, 1, 2, 4, 3, 7, 10}
+	result := bestSum(target, numbers, nil)
+	expected := []int{10, 7}
 	if !reflect.DeepEqual(result, expected) {
 		t.Fatalf("failed, expected: %v, result: %v", expected, result)
 	}
