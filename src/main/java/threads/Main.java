@@ -1,6 +1,9 @@
 package threads;
 
 
+
+import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReadWriteLock;
@@ -26,9 +29,17 @@ public class Main {
         }
     }
 
-    public void createServers(){
+    public static void createServers(){
+        Map<Integer, ServerNodes> servers = new HashMap<>();
+
         for (int i = 0; i <= 2; i++) {
-            ServerNodes nodes = new ServerNodes(i);
+            ServerNodes node = new ServerNodes(i);
+            servers.put(i, node);
+        }
+        
+        for (int i = 0; i <=2; i++) {
+            // send messages to servers
+            ServerNodes s = servers.get(i);
         }
     }
 
@@ -68,7 +79,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        start();
+        createServers();
         System.out.println("end of simulation");
     }
 }
